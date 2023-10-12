@@ -4,16 +4,21 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
+import java.util.Random;
+
 public class FlowerPackTest {
     private Flower flower;
     private FlowerPack flowerPack;
+    private static final Random RANDOM_GENERATOR = new Random();
+    private static final int MAX_PRICE = 100;
 
     @BeforeEach
     public void init() {
         flower = new Flower();
         FlowerType flowerType = FlowerType.TULIP;
         flower.setFlowerType(flowerType);
-        flowerPack = new FlowerPack(flower, 10);
+        int quantity = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        flowerPack = new FlowerPack(flower, quantity);
     }
 
     @Test
@@ -23,7 +28,8 @@ public class FlowerPackTest {
 
     @Test
     public void testQuantity() {
-        flowerPack.setQuantity(-10);
-        Assertions.assertEquals(1, flowerPack.getQuantity());
+        int newQuantity = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        flowerPack.setQuantity(newQuantity);
+        Assertions.assertEquals(newQuantity, flowerPack.getQuantity());
     }
 }

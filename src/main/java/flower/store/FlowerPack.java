@@ -1,6 +1,5 @@
 package flower.store;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 @Getter
@@ -12,8 +11,13 @@ public class FlowerPack {
         this.flower = flower;
         this.quantity = quantity;
     }
-    public void setQuantity(int quantity) {
-        this.quantity = quantity < 1 ? 1 : quantity;
+    public void setQuantity(int flowerQuantity) {
+        if (flowerQuantity < 1) {
+            this.quantity = 1;
+        }
+        else {
+            this.quantity = flowerQuantity;
+        }
     }
     public double getPrice() {
         return quantity * flower.getPrice();

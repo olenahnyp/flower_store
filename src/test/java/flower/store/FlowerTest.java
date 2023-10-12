@@ -33,8 +33,9 @@ public class FlowerTest {
 
     @Test
     public void testSepalLength() {
-        flower.setSepalLength(25.5);
-        Assertions.assertEquals(25.5, flower.getSepalLength());
+        int sepalLength = RANDOM_GENERATOR.nextInt(MAX_PRICE);
+        flower.setSepalLength(sepalLength);
+        Assertions.assertEquals(sepalLength, flower.getSepalLength());
     }
 
     @Test
