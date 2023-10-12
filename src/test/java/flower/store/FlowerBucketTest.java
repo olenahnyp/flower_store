@@ -41,8 +41,8 @@ public class FlowerBucketTest {
     public void testPrice() {
         flowerBucket.addFlowerPack(flowerPackOne);
         flowerBucket.addFlowerPack(flowerPackTwo);
-        Assertions.assertEquals(flowerPackOne.getPrice() +
-                flowerPackTwo.getPrice(), flowerBucket.getPrice());
+        double resultPrice = flowerPackOne.getPrice() + flowerPackTwo.getPrice();
+        Assertions.assertEquals(resultPrice, flowerBucket.getPrice());
     }
     @Test
     public void testAddFlowerPack() {
