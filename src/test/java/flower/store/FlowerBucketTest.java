@@ -9,13 +9,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FlowerBucketTest {
+    private static final Random RANDOM_GENERATOR = new Random();
+    private static final int MAX_PRICE = 100;
     private Flower tulip;
     private Flower chamomile;
     private FlowerPack flowerPackOne;
     private FlowerPack flowerPackTwo;
     private FlowerBucket flowerBucket;
-    private static final Random RANDOM_GENERATOR = new Random();
-    private static final int MAX_PRICE = 100;
 
     @BeforeEach
     public void init() {
@@ -41,7 +41,8 @@ public class FlowerBucketTest {
     public void testPrice() {
         flowerBucket.addFlowerPack(flowerPackOne);
         flowerBucket.addFlowerPack(flowerPackTwo);
-        Assertions.assertEquals(flowerPackOne.getPrice() + flowerPackTwo.getPrice(), flowerBucket.getPrice());
+        Assertions.assertEquals(flowerPackOne.getPrice() +
+                flowerPackTwo.getPrice(), flowerBucket.getPrice());
     }
     @Test
     public void testAddFlowerPack() {

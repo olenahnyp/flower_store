@@ -7,10 +7,10 @@ import org.junit.jupiter.api.Assertions;
 import java.util.Random;
 
 public class FlowerPackTest {
-    private Flower flower;
-    private FlowerPack flowerPack;
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
+    private Flower flower;
+    private FlowerPack flowerPack;
 
     @BeforeEach
     public void init() {
@@ -23,7 +23,8 @@ public class FlowerPackTest {
 
     @Test
     public void testPrice() {
-        Assertions.assertEquals(flower.getPrice() * flowerPack.getQuantity(), flower.getPrice());
+        Assertions.assertEquals(flower.getPrice() *
+                flowerPack.getQuantity(), flower.getPrice());
     }
 
     @Test
