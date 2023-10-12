@@ -23,8 +23,8 @@ public class FlowerPackTest {
 
     @Test
     public void testPrice() {
-        double resultPrice = flower.getPrice() * flowerPack.getQuantity();
-        Assertions.assertEquals(resultPrice, flower.getPrice());
+        double result = flower.getPrice() * flowerPack.getQuantity();
+        Assertions.assertEquals(result, flower.getPrice());
     }
 
     @Test
