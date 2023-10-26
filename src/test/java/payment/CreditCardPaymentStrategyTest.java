@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Assertions;
 import java.util.Random;
 
 public class CreditCardPaymentStrategyTest {
-    private CreditCartPaymentStrategy creditCardPaymentStrategy;
-    private double price;
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
+    private CreditCartPaymentStrategy creditCardPaymentStrategy;
+    private double price;
     @BeforeEach
     public void init() {
         creditCardPaymentStrategy = new CreditCartPaymentStrategy();
@@ -19,7 +19,8 @@ public class CreditCardPaymentStrategyTest {
     }
     @Test
     public void testCreditCardPayment() {
-        Assertions.assertEquals(creditCardPaymentStrategy.pay(price), "Payed " + price + " dollars using credit card");
+        Assertions.assertEquals(creditCardPaymentStrategy.pay(price),
+                "Payed " + price + " dollars using credit card");
     }
 }
 

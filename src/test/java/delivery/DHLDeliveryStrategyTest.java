@@ -9,14 +9,15 @@ import org.junit.jupiter.api.Assertions;
 import java.util.List;
 
 public class DHLDeliveryStrategyTest {
-    private DHLDeliveryStrategy DHLDeliveryStrategy;
-    List<Item> items;
+    private List<Item> items;
+    private DHLDeliveryStrategy dhlDeliveryStrategy;
     @BeforeEach
     public void init() {
-        DHLDeliveryStrategy = new DHLDeliveryStrategy();
+        dhlDeliveryStrategy = new DHLDeliveryStrategy();
     }
     @Test
     public void testDHLDelivery() {
-        Assertions.assertEquals(DHLDeliveryStrategy.deliver(items), "Thank you for using DHL Delivery!");
+        Assertions.assertEquals(dhlDeliveryStrategy.deliver(items),
+                "Thank you for using DHL Delivery!");
     }
 }

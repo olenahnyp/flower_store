@@ -9,14 +9,15 @@ import org.junit.jupiter.api.Assertions;
 import java.util.List;
 
 public class PostDeliveryStrategyTest {
+    private List<Item> items;
     private PostDeliveryStrategy postDeliveryStrategy;
-    List<Item> items;
     @BeforeEach
     public void init() {
         postDeliveryStrategy = new PostDeliveryStrategy();
     }
     @Test
     public void testPostDelivery() {
-        Assertions.assertEquals(postDeliveryStrategy.deliver(items), "Thank you for using Post Delivery!");
+        Assertions.assertEquals(postDeliveryStrategy.deliver(items),
+                "Thank you for using Post Delivery!");
     }
 }

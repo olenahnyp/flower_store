@@ -8,10 +8,10 @@ import org.junit.jupiter.api.Assertions;
 import java.util.Random;
 
 public class PayPalPaymentStrategyTest {
-    private PayPalPaymentStrategy payPalPaymentStrategy;
-    private double price;
     private static final Random RANDOM_GENERATOR = new Random();
     private static final int MAX_PRICE = 100;
+    private PayPalPaymentStrategy payPalPaymentStrategy;
+    private double price;
     @BeforeEach
     public void init() {
         payPalPaymentStrategy = new PayPalPaymentStrategy();
@@ -19,6 +19,7 @@ public class PayPalPaymentStrategyTest {
     }
     @Test
     public void testPalPalPayment() {
-        Assertions.assertEquals(payPalPaymentStrategy.pay(price), "Payed " + price + " dollars using pay pal");
+        Assertions.assertEquals(payPalPaymentStrategy.pay(price),
+                "Payed " + price + " dollars using pay pal");
     }
 }
