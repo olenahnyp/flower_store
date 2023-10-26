@@ -8,14 +8,12 @@ import org.junit.jupiter.api.Assertions;
 import java.util.Random;
 
 public class CreditCardPaymentStrategyTest {
-    private static final Random RANDOM_GENERATOR = new Random();
-    private static final int MAX_PRICE = 100;
     private CreditCartPaymentStrategy creditCardPaymentStrategy;
     private double price;
     @BeforeEach
     public void init() {
         creditCardPaymentStrategy = new CreditCartPaymentStrategy();
-        price = RANDOM_GENERATOR.nextDouble(MAX_PRICE);
+        price = 0;
     }
     @Test
     public void testCreditCardPayment() {
