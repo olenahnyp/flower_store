@@ -1,5 +1,8 @@
 package flower.store;
 
+import com.example.demo.flowers.Flower;
+import com.example.demo.flowers.FlowerPack;
+import com.example.demo.flowers.FlowerType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
@@ -23,8 +26,8 @@ public class FlowerPackTest {
 
     @Test
     public void testPrice() {
-        double result = flower.getPrice() * flowerPack.getQuantity();
-        Assertions.assertEquals(result, flower.getPrice());
+        Assertions.assertEquals(flower.getPrice() *
+                flowerPack.getQuantity(), flower.getPrice());
     }
 
     @Test

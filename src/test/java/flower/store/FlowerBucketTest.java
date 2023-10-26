@@ -1,5 +1,10 @@
 package flower.store;
 
+import com.example.demo.flowers.Flower;
+import com.example.demo.flowers.FlowerBucket;
+import com.example.demo.flowers.FlowerPack;
+import com.example.demo.flowers.FlowerType;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
@@ -41,8 +46,8 @@ public class FlowerBucketTest {
     public void testPrice() {
         flowerBucket.addFlowerPack(flowerPackOne);
         flowerBucket.addFlowerPack(flowerPackTwo);
-        double result = flowerPackOne.getPrice() + flowerPackTwo.getPrice();
-        Assertions.assertEquals(result, flowerBucket.getPrice());
+        Assertions.assertEquals(flowerPackOne.getPrice() +
+                flowerPackTwo.getPrice(), flowerBucket.getPrice());
     }
     @Test
     public void testAddFlowerPack() {
