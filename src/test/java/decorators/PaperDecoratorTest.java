@@ -23,7 +23,8 @@ public class PaperDecoratorTest {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
         final int PAPER_PRICE = 13;
         flower.setPrice(price);
-        Assertions.assertEquals(paperDecorator.getPrice(), PAPER_PRICE + price);
+        Assertions.assertEquals(paperDecorator.getPrice(), 
+        PAPER_PRICE + price);
     }
     @Test
     public void testGetDescription() {
