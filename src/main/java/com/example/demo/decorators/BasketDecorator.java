@@ -11,7 +11,7 @@ public class BasketDecorator implements ItemDecorator {
         return "Your bucket is decorated with basket";
     }
     public double getPrice() {
-        final int MyBasketPrice = 4;
-        return MyBasketPrice + this.item.getPrice();
+        final int BASKET_PRICE = 4;
+        return BASKET_PRICE + this.item.getPrice();
     }
 }

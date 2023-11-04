@@ -11,7 +11,7 @@ public class PaperDecorator implements ItemDecorator {
         return "Your bucket is decorated with paper";
     }
     public double getPrice() {
-        final int MyPaperPrice = 13;
-        return MyPaperPrice + this.item.getPrice();
+        final int PAPER_PRICE = 13;
+        return PAPER_PRICE + this.item.getPrice();
     }
 }

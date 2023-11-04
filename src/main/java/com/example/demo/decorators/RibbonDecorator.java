@@ -11,7 +11,7 @@ public class RibbonDecorator implements ItemDecorator {
         return "Your bucket is decorated with ribbon";
     }
     public double getPrice() {
-        final int MyRibbonPrice = 40;
-        return MyRibbonPrice + this.item.getPrice();
+        final int RIBBON_PRICE = 40;
+        return RIBBON_PRICE + this.item.getPrice();
     }
 }

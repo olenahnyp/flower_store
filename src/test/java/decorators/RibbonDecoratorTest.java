@@ -21,9 +21,9 @@ public class RibbonDecoratorTest {
     @Test
     public void testGetPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        final int MyRibbonPrice = 40;
+        final int RIBBON_PRICE = 40;
         flower.setPrice(price);
-        Assertions.assertEquals(ribbonDecorator.getPrice(), MyRibbonPrice + price);
+        Assertions.assertEquals(ribbonDecorator.getPrice(), RIBBON_PRICE + price);
     }
     @Test
     public void testGetDescription() {
