@@ -21,7 +21,7 @@ public class PaperDecoratorTest {
     @Test
     public void testGetPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        int paperPrice = 13;
+        final int paperPrice = 13;
         flower.setPrice(price);
         Assertions.assertEquals(paperDecorator.getPrice(), paperPrice + price);
     }

@@ -21,7 +21,7 @@ public class BasketDecoratorTest {
     @Test
     public void testGetPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        int basketPrice = 4;
+        final int basketPrice = 4;
         flower.setPrice(price);
         Assertions.assertEquals(basketDecorator.getPrice(), basketPrice + price);
     }
