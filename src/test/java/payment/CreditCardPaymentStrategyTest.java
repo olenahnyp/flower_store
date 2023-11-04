@@ -19,4 +19,3 @@ public class CreditCardPaymentStrategyTest {
                 "Payed " + price + " dollars using credit card");
     }
 }
-

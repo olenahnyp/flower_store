@@ -6,16 +6,18 @@ import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 @Setter @Getter @AllArgsConstructor @NoArgsConstructor @ToString
-public class Flower {
+@Entity
+public class Flower extends Item{
+    @Id
+    private int id;
+    private double price;
     private double sepalLength;
     private FlowerColor color;
-    private double price;
     private FlowerType flowerType;
     public Flower(Flower flower) {
-    }
-
-    public String getColor() {
-        return color.toString();
     }
 }
