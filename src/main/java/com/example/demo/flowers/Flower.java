@@ -11,7 +11,7 @@ import javax.persistence.Id;
 
 @Setter @Getter @AllArgsConstructor @NoArgsConstructor @ToString
 @Entity
-public class Flower extends Item{
+public class Flower extends Item {
     @Id
     private int id;
     private double price;

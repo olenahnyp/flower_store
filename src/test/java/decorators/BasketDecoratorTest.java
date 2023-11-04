@@ -21,12 +21,13 @@ public class BasketDecoratorTest {
     @Test
     public void testGetPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        final int basketPrice = 4;
+        final int MyBasketPrice = 4;
         flower.setPrice(price);
-        Assertions.assertEquals(basketDecorator.getPrice(), basketPrice + price);
+        Assertions.assertEquals(basketDecorator.getPrice(), MyBasketPrice + price);
     }
     @Test
     public void testGetDescription() {
-        Assertions.assertEquals(basketDecorator.getDescription(), "Your bucket is decorated with basket");
+        Assertions.assertEquals(basketDecorator.getDescription(), 
+        "Your bucket is decorated with basket");
     }
 }

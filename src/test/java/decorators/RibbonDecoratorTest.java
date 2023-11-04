@@ -21,13 +21,14 @@ public class RibbonDecoratorTest {
     @Test
     public void testGetPrice() {
         int price = RANDOM_GENERATOR.nextInt(MAX_PRICE);
-        final int ribbonPrice = 40;
+        final int MyRibbonPrice = 40;
         flower.setPrice(price);
-        Assertions.assertEquals(ribbonDecorator.getPrice(), ribbonPrice + price);
+        Assertions.assertEquals(ribbonDecorator.getPrice(), MyRibbonPrice + price);
     }
     @Test
     public void testGetDescription() {
-        Assertions.assertEquals(ribbonDecorator.getDescription(), "Your bucket is decorated with ribbon");
+        Assertions.assertEquals(ribbonDecorator.getDescription(), 
+        "Your bucket is decorated with ribbon");
     }
 }
 
