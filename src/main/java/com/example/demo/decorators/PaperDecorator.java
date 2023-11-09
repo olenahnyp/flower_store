@@ -7,7 +7,8 @@ public class PaperDecorator extends ItemDecorator {
         super(item);
     }
     public double getPrice() {
-        return super.getPrice() + 13;
+        final double PAPER_PRICE = 13;
+        return super.getPrice() + PAPER_PRICE;
     }
     public String getDescription() {
         return "Your bucket is decorated with paper";

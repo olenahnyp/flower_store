@@ -7,7 +7,8 @@ public class RibbonDecorator extends ItemDecorator {
         super(item);
     }
     public double getPrice() {
-        return super.getPrice() + 40;
+        final double RIBBON_PRICE = 40;
+        return super.getPrice() + RIBBON_PRICE;
     }
     public String getDescription() {
         return "Your bucket is decorated with ribbon";

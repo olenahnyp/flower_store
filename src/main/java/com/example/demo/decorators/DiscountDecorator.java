@@ -7,6 +7,7 @@ public class DiscountDecorator extends ItemDecorator {
         super(item);
     }
     public double getPrice() {
-        return super.getPrice() * 0.8;
+        final double DISCOUNT = 0.8;
+        return super.getPrice() * DISCOUNT;
     }
 }

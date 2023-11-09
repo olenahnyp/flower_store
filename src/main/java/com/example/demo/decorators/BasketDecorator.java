@@ -7,7 +7,8 @@ public class BasketDecorator extends ItemDecorator {
         super(item);
     }
     public double getPrice() {
-        return super.getPrice() + 4;
+        final double BASKET_PRICE = 4;
+        return super.getPrice() + BASKET_PRICE;
     }
     public String getDescription() {
         return "Your bucket is decorated with basket";
