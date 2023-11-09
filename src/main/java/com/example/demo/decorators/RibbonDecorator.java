@@ -1,17 +1,15 @@
 package com.example.demo.decorators;
 
 import com.example.demo.flowers.Item;
-import lombok.AllArgsConstructor;
 
-@AllArgsConstructor
-public class RibbonDecorator implements ItemDecorator {
-    private Item item;
-    @Override
-    public String getDescription() {
-        return "Your bucket is decorated with ribbon";
+public class RibbonDecorator extends ItemDecorator {
+    public RibbonDecorator(Item item) {
+        super(item);
     }
     public double getPrice() {
-        final int RIBBON_PRICE = 40;
-        return RIBBON_PRICE + this.item.getPrice();
+        return super.getPrice() + 40;
+    }
+    public String getDescription() {
+        return "Your bucket is decorated with ribbon";
     }
 }

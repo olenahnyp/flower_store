@@ -20,4 +20,8 @@ public class Flower extends Item {
     private FlowerType flowerType;
     public Flower(Flower flower) {
     }
+    @Override
+    public String getDescription() {
+        return "This is flower";
+    }
 }
